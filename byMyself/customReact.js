@@ -10,12 +10,13 @@ function customRender(reactEle, container){
     //for repeateation -loop
     const domElement = document.createAttribute(reactEle.type)
     domElement.innerHTML = reactEle.children
-    for(const prop in props)
+    for(const prop in reactEle.props)
     {
-        if(prop == children)continue;
-        domElement.setAttribute(prop,reactEle.props[prop])
+        if(prop === "children")continue;
+        domElement.setAttribute(prop, reactEle.props
+            [prop])
     }
-    
+    container.appendChild(domElement);
 }
 
 const reactEle = {
@@ -27,7 +28,7 @@ const reactEle = {
     children: 'Click me to cisit google'
 }
 
-const mainContainer = document.getElementById('root')
+const mainContainer = document.getElementById('root')  
 
 
-customRender(reactEle,mainContainer)
+customRender(reactEle,mainContainer)// inject treactEle in mainContainer 
