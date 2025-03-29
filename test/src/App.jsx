@@ -26,7 +26,15 @@ function App() {
           {
             setCounter ( prevCounter => prevCounter+1);//Using counter directly might lead to stale state issues.
 
+          //  call function  ,prevCounter is a prev state 
             //Always use the functional form (prevCounter => prevCounter + 1) when state depends on the previous value.
+           
+            //if we do like this 
+            setCounter(counter+1);
+            setCounter(counter+1);
+            setCounter(counter+1);
+            // setCounter only increament one time beacuse state is same 
+
           }
     }
     const removeValue =()=> {
