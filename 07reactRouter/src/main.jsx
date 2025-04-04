@@ -13,7 +13,7 @@ import Github from './components/Github/Github.jsx'
 import { infoLoader } from './components/Github/Github.jsx'
 
 
-// const router = createBrowserRouter([
+// const router = createBrowserRouter([.
 //   {
 //     path:'/',
 //     element: <Layout/>,
