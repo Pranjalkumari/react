@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import {useDispatch} from 'react-redux'
 import authService from "./appwrite/auth"
 import './App.css'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
    const [loading , setLoading] = useState(true)
@@ -21,7 +23,13 @@ function App() {
    },[])
     
    return !loading ? (
- <div className=''></div>
+ <div className='min-h-screen flex flex-wrap content-between bg-gray-400 '>
+  <div className='w-full block'>
+    <Header/>
+  <main>
+    </main>
+    <Footer/></div>
+ </div>
    ): null
 }
 
