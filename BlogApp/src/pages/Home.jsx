@@ -4,15 +4,15 @@ import { useParams, useNavigate } from 'react-router-dom'
 import appwriteService from '../appwrite/conf'
 
 function Home() {
-    const [post, setPost ] = useState(null)
+    const [posts, setPosts ] = useState(null)
     useEffect(()=>{
-         appwriteService.getPost().then((post)=>{
-            if(post){
-                setPost(post.documents)
+         appwriteService.getPost().then((posts)=>{
+            if(posts){
+                setPosts(posts.documents)
             }
          })
     },[])
-    if(post.length === 0){
+    if(posts.length === 0){
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
